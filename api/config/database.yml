@@ -1,0 +1,32 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: postgres
+  host: <%= ENV['POSTGRES_1_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['POSTGRES_1_PORT_5432_TCP_PORT'] %>
+
+development:
+  <<: *default
+  database: api_development
+
+test:
+  <<: *default
+  database: api_test
+
+staging:
+  <<: *default
+  database: api_staging
+  username: <%= ENV['API_DATABASE_USERNAME'] %>
+  password: <%= ENV['API_DATABASE_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_1_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['POSTGRES_1_PORT_5432_TCP_PORT'] %>
+
+production:
+  <<: *default
+  database: api_production
+  username: <%= ENV['API_DATABASE_USERNAME'] %>
+  password: <%= ENV['API_DATABASE_PASSWORD'] %>
+  host: <%= ENV['POSTGRES_1_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['POSTGRES_1_PORT_5432_TCP_PORT'] %>

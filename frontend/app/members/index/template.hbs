@@ -1,0 +1,19 @@
+<table id="members">
+  <tbody>
+    {{#each model as |member|}}
+      <tr>
+        <td class='name'>
+          {{member.name}}
+        </td>
+        <td class='email'>
+          {{member.email}}
+        </td>
+        <td>
+          {{link-to 'Edit' 'members.edit' member.id class='edit'}}
+          <a href='#' {{action 'delete' member preventDefault=true}} class='delete'>Delete</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{link-to 'Ajouter un membre' 'members.new' id='add' }}
