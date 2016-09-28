@@ -39,7 +39,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.host = 'https://woznex.herokuapp.com/';
   }
 
   return ENV;

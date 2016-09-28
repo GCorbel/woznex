@@ -7,7 +7,7 @@ import {
 } from 'ember-cli-page-object';
 
 export default create({
-  visit: visitable('/members'),
+  visit: visitable('/'),
 
   add: clickable('#add'),
   edit: clickable('#members tr:first .edit'),
