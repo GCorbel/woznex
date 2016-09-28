@@ -9,11 +9,11 @@
           {{member.email}}
         </td>
         <td>
-          {{link-to 'Edit' 'members.edit' member.id class='edit'}}
-          <a href='#' {{action 'delete' member preventDefault=true}} class='delete'>Delete</a>
+          {{link-to (t "members.index.edit") 'members.edit' member.id class='edit'}}
+          <a href='#' {{action 'delete' member preventDefault=true}} class='delete'>{{t 'members.index.delete'}}</a>
         </td>
       </tr>
     {{/each}}
   </tbody>
 </table>
-{{link-to 'Ajouter un membre' 'members.new' id='add' }}
+{{link-to (t 'members.index.add') 'members.new' id='add' }}
