@@ -1,9 +1,1 @@
-<form {{action 'submit' on='submit'}}>
-  <label for="name">{{t 'members.edit.name'}}</label>
-  {{input id='name' value=model.name type='text'}}
-
-  <label for="email">{{t 'members.edit.email'}}</label>
-  {{input id='email' value=model.email type='text'}}
-
-  <p><input id="submit" type="submit" value="{{t 'members.edit.submit'}}"></p>
-</form>
+{{wz-member-form member=model submit='submit'}}

@@ -1,0 +1,9 @@
+<form {{action 'submit' on='submit'}}>
+  <label for="name">{{t 'members.new.name'}}</label>
+  {{input id='name' value=member.name type='text'}}
+
+  <label for="email">{{t 'members.new.email'}}</label>
+  {{input id='email' value=member.email type='text'}}
+
+  <p><input id="submit" type="submit" value="{{t 'members.new.submit'}}"></p>
+</form>
